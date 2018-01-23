@@ -22,7 +22,7 @@ namespace Nancy.Metadata.Swagger.DemoApplication.Modules
         {
             NestedRequestModel model = this.Bind<NestedRequestModel>();
 
-            SimpleResponseModel response = new SimpleResponseModel
+            var response = new SimpleResponseModel
             {
                 Hello = string.Format("Hello, {0}. We got your name from nested obejct", model.SimpleModel.Name)
             };
@@ -34,7 +34,7 @@ namespace Nancy.Metadata.Swagger.DemoApplication.Modules
         {
             SimpleRequestModel model = this.Bind<SimpleRequestModel>();
 
-            SimpleResponseModel response = new SimpleResponseModel
+            var response = new SimpleResponseModel
             {
                 Hello = string.Format("Hello, {0}", model.Name)
             };
@@ -44,7 +44,7 @@ namespace Nancy.Metadata.Swagger.DemoApplication.Modules
 
         private Response HelloPost()
         {
-            SimpleResponseModel response = new SimpleResponseModel
+            var response = new SimpleResponseModel
             {
                 Hello = "Hello Post!"
             };
@@ -54,7 +54,7 @@ namespace Nancy.Metadata.Swagger.DemoApplication.Modules
 
         private Response Hello(string name)
         {
-            SimpleResponseModel response = new SimpleResponseModel
+            var response = new SimpleResponseModel
             {
                 Hello = string.Format("Hello, {0}", name)
             };
@@ -64,7 +64,7 @@ namespace Nancy.Metadata.Swagger.DemoApplication.Modules
 
         private Response HelloWorld()
         {
-            SimpleResponseModel response = new SimpleResponseModel
+            var response = new SimpleResponseModel
             {
                 Hello = "Hello World!"
             };

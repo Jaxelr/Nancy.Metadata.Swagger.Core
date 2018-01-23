@@ -5,7 +5,7 @@
     <Version>0.1.0</Version>
     <PackageId>Nancy.Metadata.Swagger.AspNetCore</PackageId>
     <Authors>Jaxel Rojas, Anton Kudryavtsev</Authors>
-    <Company />
+    <Title>Nancy.Metadata.Swagger.AspNetCore</Title>
     <Product>Nancy.Metadata.Swagger.AspNetCore</Product>
     <Description>This is a port of the Nancy.Metadata.Swagger lib for Netstandard 2.0.</Description>
     <PackageLicenseUrl>https://opensource.org/licenses/MIT</PackageLicenseUrl>
@@ -16,6 +16,10 @@
     <FileVersion>0.1.0.0</FileVersion>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Copyright>2018</Copyright>
+    <PackageReleaseNotes>Initial port into net standard 2.0</PackageReleaseNotes>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <NeutralLanguage></NeutralLanguage>
+    <Company />
   </PropertyGroup>
 
   <ItemGroup>
