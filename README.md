@@ -1,3 +1,5 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/aa0pljkj6db02696/branch/master?svg=true)](https://ci.appveyor.com/project/Jaxelr/nancy-metadata-swagger-aspnetcore/branch/master)
+
 # Nancy.Metadata.Swagger.AspNetCore
 This is a port of an existing Nancy.Metadata.Swagger repository (https://github.com/HackandCraft/Nancy.Metadata.Swagger) but targeted to run on Net Standard 2.0. Most of the modifications have been cosmetical and havent really affected the surface of the API in order to maintain certain backwards compatibility when upgrading to Nancy 2.0.0.
 
