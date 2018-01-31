@@ -11,7 +11,7 @@ namespace Nancy.Metadata.Swagger.DemoApplication.Modules
         public RootModule() : base("/api")
         {
             Get("/hello", r => HelloWorld(), name: "SimpleRequest");
-            Post("/hello", r => HelloPost(), name: "SimplePostRequst");
+            Post("/hello", r => HelloPost(), name: "SimplePostRequest");
             Get("/hello/{name}", r => Hello(r.name), name: "SimpleRequestWithParameter");
             Post("/hello", r => r.HelloPost(), name: "SimplePostRequest");
             Post("hello/model/", r => HelloModel(), name: "PostRequestWithModel");
@@ -24,7 +24,7 @@ namespace Nancy.Metadata.Swagger.DemoApplication.Modules
 
             var response = new SimpleResponseModel
             {
-                Hello = $"Hello, {model.SimpleModel.Name}. We got your name from nested object"
+                Hello = $"Hello, {model.SimpleModel.Name}. We got your name from a nested object."
             };
 
             return Response.AsJson(response);
@@ -36,7 +36,7 @@ namespace Nancy.Metadata.Swagger.DemoApplication.Modules
 
             var response = new SimpleResponseModel
             {
-                Hello = $"Hello, {model.Name}"
+                Hello = $"Hello, {model.Name}."
             };
 
             return Response.AsJson(response);
@@ -56,7 +56,7 @@ namespace Nancy.Metadata.Swagger.DemoApplication.Modules
         {
             var response = new SimpleResponseModel
             {
-                Hello = $"Hello, {name}"
+                Hello = $"Hello, {name}."
             };
 
             return Response.AsJson(response);
