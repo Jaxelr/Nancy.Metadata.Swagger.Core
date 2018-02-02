@@ -17,6 +17,7 @@ namespace Nancy.Metadata.Swagger.Modules
         private readonly string host;
         private readonly string apiBaseUrl;
         private readonly string[] schemes;
+        private readonly string contentTypeJson = "application/json";
 
         protected SwaggerDocsModuleBase(IRouteCacheProvider routeCacheProvider,
             string docsLocation = "/api/docs",
@@ -43,7 +44,12 @@ namespace Nancy.Metadata.Swagger.Modules
                 GenerateSpecification();
             }
 
-            return Response.AsText(JsonConvert.SerializeObject(swaggerSpecification, Formatting.None, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore }));
+            return Response.AsText(JsonConvert.SerializeObject(swaggerSpecification,
+                Formatting.None, new JsonSerializerSettings
+                {
+                    NullValueHandling = NullValueHandling.Ignore
+                }))
+                .WithContentType(contentTypeJson);
         }
 
         private void GenerateSpecification()
@@ -63,7 +69,7 @@ namespace Nancy.Metadata.Swagger.Modules
             // generate documentation
             IEnumerable<SwaggerRouteMetadata> metadata = routeCacheProvider.GetCache().RetrieveMetadata<SwaggerRouteMetadata>();
 
-            Dictionary<string, Dictionary<string, SwaggerEndpointInfo>> endpoints = new Dictionary<string, Dictionary<string, SwaggerEndpointInfo>>();
+            var endpoints = new Dictionary<string, Dictionary<string, SwaggerEndpointInfo>>();
 
             foreach (SwaggerRouteMetadata m in metadata)
             {
