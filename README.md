@@ -76,3 +76,7 @@ Default values are provided, but I strongly suggest you configure yours obtaning
 ### Adding swagger UI:
 
 Now (this is completely optional and its for discovery purposes) you are able to add Swagger-UI (you can download it from http://swagger.io/swagger-ui/ or check the github [repository here](https://github.com/swagger-api/swagger-ui)) and point it to your document module. At the index.html file you can set the default url where swagger-ui should get the json documentation file. This repo contains a Demo App to see an usage example.
+
+### New Swagger features
+
+Since Swagger's latest standard is for OpenApi (Version 3.+), i would not be putting any effort into adding new features to this library. Only bumps to the release version of netcore for Nancy and any bugs found. Feel free to Clone and PR away if you would like to add any new features.
