@@ -4,12 +4,12 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <Version>0.1.0</Version>
     <PackageId>Nancy.Metadata.Swagger.AspNetCore</PackageId>
-    <Authors>Jaxel Rojas, Anton Kudryavtsev</Authors>
+    <Authors>Jaxel Rojas;Anton Kudryavtsev</Authors>
     <Title>Nancy.Metadata.Swagger.AspNetCore</Title>
     <Product>Nancy.Metadata.Swagger.AspNetCore</Product>
     <Description>This is a port of the Nancy.Metadata.Swagger lib for Netstandard 2.0.</Description>
     <PackageLicenseUrl>https://opensource.org/licenses/MIT</PackageLicenseUrl>
-    <PackageTags>nancyfx swagger</PackageTags>
+    <PackageTags>nancyfx;swagger</PackageTags>
     <RepositoryUrl>https://github.com/Jaxelr/Nancy.Metadata.Swagger.AspNetCore</RepositoryUrl>
     <PackageProjectUrl>https://github.com/Jaxelr/Nancy.Metadata.Swagger.AspNetCore</PackageProjectUrl>
     <AssemblyVersion>0.1.0.0</AssemblyVersion>
