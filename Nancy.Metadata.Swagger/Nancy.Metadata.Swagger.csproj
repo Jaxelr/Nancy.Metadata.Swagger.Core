@@ -1,22 +1,23 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <Version>0.1.0</Version>
+    <TargetFramework>netstandard1.6</TargetFramework>
+    <Version>0.1.1</Version>
     <PackageId>Nancy.Metadata.Swagger.AspNetCore</PackageId>
     <Authors>Jaxel Rojas;Anton Kudryavtsev</Authors>
     <Title>Nancy.Metadata.Swagger.AspNetCore</Title>
     <Product>Nancy.Metadata.Swagger.AspNetCore</Product>
-    <Description>This is a port of the Nancy.Metadata.Swagger lib for Netstandard 2.0.</Description>
+    <Description>This is a port of the Nancy.Metadata.Swagger lib for Netstandard 1.6 functioning with nancy 2.+</Description>
     <PackageLicenseUrl>https://opensource.org/licenses/MIT</PackageLicenseUrl>
     <PackageTags>nancyfx;swagger</PackageTags>
     <RepositoryUrl>https://github.com/Jaxelr/Nancy.Metadata.Swagger.AspNetCore</RepositoryUrl>
     <PackageProjectUrl>https://github.com/Jaxelr/Nancy.Metadata.Swagger.AspNetCore</PackageProjectUrl>
-    <AssemblyVersion>0.1.0.0</AssemblyVersion>
-    <FileVersion>0.1.0.0</FileVersion>
+    <AssemblyVersion>0.1.1.0</AssemblyVersion>
+    <FileVersion>0.1.1.0</FileVersion>
+    <PackageVersion>0.1.1</PackageVersion>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Copyright>2018</Copyright>
-    <PackageReleaseNotes>Initial port into net standard 2.0</PackageReleaseNotes>
+    <PackageReleaseNotes>Lowering the compatibility version to net standard to 1.6</PackageReleaseNotes>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <NeutralLanguage></NeutralLanguage>
     <Company />
