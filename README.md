@@ -1,25 +1,28 @@
-[![Build status](https://ci.appveyor.com/api/projects/status/aa0pljkj6db02696/branch/master?svg=true)](https://ci.appveyor.com/project/Jaxelr/nancy-metadata-swagger-aspnetcore/branch/master)
+[![Build status](https://ci.appveyor.com/api/projects/status/aa0pljkj6db02696/branch/master?svg=true)](https://ci.appveyor.com/project/Jaxelr/nancy-metadata-swagger-aspnetcore/branch/master)[![NuGet](https://img.shields.io/nuget/v/Nancy.Metadata.Swagger.AspNetCore.svg)](https://www.nuget.org/packages/Nancy.Metadata.Swagger.AspNetCore)
 
 # Nancy.Metadata.Swagger.AspNetCore
-This is a port of an existing Nancy.Metadata.Swagger repository (https://github.com/HackandCraft/Nancy.Metadata.Swagger) but targeted to run on Net Standard 2.0. Most of the modifications have been minor tweaks and havent really affected the surface of the API in order to maintain certain backwards compatibility when upgrading to Nancy 2.0.0.
+This is a port of an existing Nancy.Metadata.Swagger repository (https://github.com/HackandCraft/Nancy.Metadata.Swagger) but targeted to run on Net Standard 2.0. Most of the modifications have been minor tweaks and havent really affected the surface of the API in order to maintain certain backwards compatibility when targeting Nancy 2.+.
 
 # Introduction
 
-Nancy.Metadata.Swagger is a library that makes it easier to create API documentation for swagger 2.0 (http://swagger.io/) with Nancy metadata modules. This targets exclusively the 2.0 Swagger specification. For a version that targets Open Api 3.0, check the following repo / nuget package (https://github.com/Jaxelr/Nancy.Metadata.OpenApi).
+Nancy.Metadata.Swagger is a library that makes it easier to create API documentation for swagger 2.0 (http://swagger.io/) with Nancy metadata modules. This targets exclusively the 2.0 Swagger specification. For a version that targets Open Api 3.0.0, check the following [library](https://github.com/Jaxelr/Nancy.Metadata.OpenApi).
 
 ## Dependencies
 
 Nancy.Metadata.Swagger uses Newtonsoft Json.Net (https://www.newtonsoft.com/json) and NJsonSchema for .Net (https://github.com/RSuter/NJsonSchema) to generate objects schema. 
-Also it uses some of Nancy stuff, so it should be installed to.
+Also it uses some of Nancy libs, so it should be installed to.
 
 ## Gettings started
 
 First you need to install Nancy.Metadata.Swagger.AspNetCore and Nancy.Metadata.Modules nuget packages by:
 
 	PM> Install-Package Nancy.Metadata.Swagger.AspNetCore
-	PM> Install-Package Nancy.Metadata.Modules
+	PM> Install-Package Nancy.Metadata.Modules -Version 2.0.0-clinteastwood 
 
-Once this is done, you must locate your module implementations and generate a metadataModule with the descriptions.
+*Keep in mind this library currently targets prerelease version of Nancy. 
+
+
+Once this is done, locate your module implementations and generate a metadataModule with the descriptions.
 
 This is a sample implementation of of a Nancy Module:
 
@@ -33,7 +36,6 @@ public class RootModule : NancyModule
 }
 ```
 The example metadata module (for ``%modulename%Module`` should be named ``%modulename%MetadataModule``):
-**IMPORTANT: Metadata module file should be placed in the same namespace within the module for discovering purposes**
 
 ```c#
      public class RootMetadataModule : MetadataModule<SwaggerRouteMetadata>
@@ -47,7 +49,9 @@ The example metadata module (for ``%modulename%Module`` should be named ``%modul
     }
 ```
 
-After doing this for each module as needed, proceed to configure the endpoint that will serve the documents described. 
+**!IMPORTANT: Metadata module file should be placed in the same namespace within the module for discovering purposes**
+
+After doing this for each module as needed, we must proceed to configure the endpoint that will serve the documents described. 
 
 ## Adding the docs module
 
@@ -75,8 +79,8 @@ Default values are provided, but I strongly suggest you configure yours obtaning
 
 ### Adding swagger UI:
 
-Now (this is completely optional and its for discovery purposes) you are able to add Swagger-UI (you can download it from http://swagger.io/swagger-ui/ or check the github [repository here](https://github.com/swagger-api/swagger-ui)) and point it to your document module. At the index.html file you can set the default url where swagger-ui should get the json documentation file. This repo contains a Demo App to see an usage example.
+Now (this is completely optional and its mostly for discovery purposes) you are able to add Swagger-UI (you can download it from http://swagger.io/swagger-ui/ or check the github [repository here](https://github.com/swagger-api/swagger-ui) or heck use [npm](https://www.npmjs.com/package/swagger-ui)) and point it to your document module. At the index.html file you can set the default url where swagger-ui should get the json documentation file. This repo contains a Demo App to see an usage example.
 
-### New Swagger features
+### Missing Swagger features
 
-Since Swagger's latest standard is for OpenApi (Version 3.+), i would not be putting any effort into adding new features to this library. Only bumps to the release version of netcore for Nancy and any bugs found. Feel free to Clone and PR away if you would like to add any new features.
+Since Swagger's latest standard is for OpenApi (Version 3.+), i would not be putting any effort into adding new features to this library, since this functionality mostly covers what my current needs. I will probably just attend bumps to the release version of netcore for Nancy and any bugs found. By all means, Feel free to Clone and PR away if you would like to add any new features.
