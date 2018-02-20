@@ -10,3 +10,5 @@ before_build:
   - cmd: dotnet restore ./Nancy.Metadata.Swagger/Nancy.Metadata.Swagger.csproj
 build_script:
   - cmd: dotnet publish ./Nancy.Metadata.Swagger/Nancy.Metadata.Swagger.csproj
+artifacts:
+  - path: '**\*.nupkg'
