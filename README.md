@@ -38,15 +38,15 @@ public class RootModule : NancyModule
 The example metadata module (for ``%modulename%Module`` should be named ``%modulename%MetadataModule``):
 
 ```c#
-     public class RootMetadataModule : MetadataModule<SwaggerRouteMetadata>
+public class RootMetadataModule : MetadataModule<SwaggerRouteMetadata>
+{
+    public RootMetadataModule()
     {
-        public RootMetadataModule()
-        {
-            Describe["SimpleRequestWithParameter"] = desc => new SwaggerRouteMetadata(desc)
-                .With(i => i.WithResponseModel("200", typeof(SimpleResponseModel), "Sample response")
-                            .WithRequestParameter("name"));
-        }
+        Describe["SimpleRequestWithParameter"] = desc => new SwaggerRouteMetadata(desc)
+            .With(i => i.WithResponseModel("200", typeof(SimpleResponseModel), "Sample response")
+                        .WithRequestParameter("name"));
     }
+}
 ```
 
 **!IMPORTANT: Metadata module file should be placed in the same namespace within the module for discovering purposes**
@@ -60,19 +60,19 @@ This module  will return your json documentation. The key is the inheritance fro
 Here's a sample module:
 
 ```c#
-    public class DocsModule : SwaggerDocsModuleBase
+public class DocsModule : SwaggerDocsModuleBase
+{
+    public DocsModule(IRouteCacheProvider routeCacheProvider) 
+        : base(routeCacheProvider, 
+          "/api/docs", 					// where module should be located
+          "Sample API documentation",   // title
+          "v1.0", 						// api version
+          "localhost:5000",             // host
+          "/api", 						// api base url (ie /dev, /api)
+          "http")						// schemes
     {
-        public DocsModule(IRouteCacheProvider routeCacheProvider) 
-        	: base(routeCacheProvider, 
-        	  "/api/docs", 					// where module should be located
-        	  "Sample API documentation",   // title
-        	  "v1.0", 						// api version
-        	  "localhost:5000",             // host
-        	  "/api", 						// api base url (ie /dev, /api)
-        	  "http")						// schemes
-        {
-        }
     }
+}
 ```
 
 Default values are provided, but I strongly suggest you configure yours obtaning them from config files or environment vars.
