@@ -5,6 +5,8 @@ namespace Nancy.Metadata.Swagger.DemoApplication.Model
 {
     public class ValidationFailedResponseModel
     {
+        public IEnumerable<string> Messages { get; set; }
+
         public ValidationFailedResponseModel(string message)
         {
             Messages = new List<string>() { message };
@@ -24,6 +26,5 @@ namespace Nancy.Metadata.Swagger.DemoApplication.Model
 
             Messages = messages;
         }
-        public IEnumerable<string> Messages { get; set; }
     }
 }
