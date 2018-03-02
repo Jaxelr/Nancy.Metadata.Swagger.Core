@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2024
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nancy.Metadata.Swagger", "Nancy.Metadata.Swagger\Nancy.Metadata.Swagger.csproj", "{5D00A219-9F98-498E-8A3F-F06449E3E864}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nancy.Metadata.Swagger", "src\Nancy.Metadata.Swagger\Nancy.Metadata.Swagger.csproj", "{5D00A219-9F98-498E-8A3F-F06449E3E864}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nancy.Metadata.Swagger.DemoApplication", "Nancy.Metadata.Swagger.DemoApplication\Nancy.Metadata.Swagger.DemoApplication.csproj", "{2F0A9588-2611-421B-AECE-9C1EE0CC4885}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nancy.Metadata.Swagger.DemoApplication", "src\Nancy.Metadata.Swagger.DemoApplication\Nancy.Metadata.Swagger.DemoApplication.csproj", "{2F0A9588-2611-421B-AECE-9C1EE0CC4885}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{F9E7BCCF-1895-4234-AE87-9F4F2DE7EC83}"
 	ProjectSection(SolutionItems) = preProject

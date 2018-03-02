@@ -7,8 +7,8 @@ init:
   - cmd: git config --global core.autocrlf true
 before_build:
   - cmd: dotnet --version
-  - cmd: dotnet restore ./Nancy.Metadata.Swagger/Nancy.Metadata.Swagger.csproj
+  - cmd: dotnet restore ./src./Nancy.Metadata.Swagger/Nancy.Metadata.Swagger.csproj
 build_script:
-  - cmd: dotnet publish ./Nancy.Metadata.Swagger/Nancy.Metadata.Swagger.csproj
+  - cmd: dotnet publish ./src/Nancy.Metadata.Swagger/Nancy.Metadata.Swagger.csproj
 artifacts:
   - path: '**\*.nupkg'
