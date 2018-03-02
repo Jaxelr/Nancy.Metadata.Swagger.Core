@@ -16,11 +16,10 @@ Also it uses some of Nancy libs, so it should be installed to.
 
 First you need to install Nancy.Metadata.Swagger.AspNetCore and Nancy.Metadata.Modules nuget packages by:
 
-	PM> Install-Package Nancy.Metadata.Swagger.AspNetCore
 	PM> Install-Package Nancy.Metadata.Modules -Version 2.0.0-clinteastwood 
+    PM> Install-Package Nancy.Metadata.Swagger.AspNetCore
 
-*Keep in mind this library currently targets prerelease version of Nancy. 
-
+*Keep in mind this library currently targets a prerelease version of Nancy. 
 
 Once this is done, locate your module implementations and generate a metadataModule with the descriptions.
 
@@ -83,4 +82,4 @@ Now (this is completely optional and its mostly for discovery purposes) you are 
 
 ### Missing Swagger features
 
-Since Swagger's latest standard is for OpenApi (Version 3.+), i would not be putting any effort into adding new features to this library, since this functionality mostly covers what my current needs. I will probably just attend bumps to the release version of netcore for Nancy and any bugs found. By all means, Feel free to Clone and PR away if you would like to add any new features.
+Since Swagger's latest standard is for OpenApi (Version 3.+), i would not be putting any type of effort into adding enhancements to this library, since the functionality mostly covers my current needs. I will probably just take care of bumps to the release version of netcore for Nancy, Swagger-UI and any bugs found. By all means, Feel free to Clone and PR away if you would like to add any new features.
