@@ -11,7 +11,7 @@
     <PackageReference Include="Newtonsoft.Json" Version="10.0.2" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Nancy.Metadata.Swagger\Nancy.Metadata.Swagger.csproj" />
+    <ProjectReference Include="..\src\Nancy.Metadata.Swagger.csproj" />
   </ItemGroup>
 
 </Project>
