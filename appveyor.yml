@@ -12,3 +12,7 @@ build_script:
   - cmd: dotnet publish ./src/Nancy.Metadata.Swagger.csproj
 artifacts:
   - path: '**\*.nupkg'
+skip_commits:
+  files:
+    - '**/*.md'
+
