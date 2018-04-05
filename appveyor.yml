@@ -8,7 +8,7 @@ init:
 before_build:
   - cmd: dotnet --version
 build_script:
-  - cmd: dotnet publish ./src/Nancy.Metadata.Swagger.csproj
+  - cmd: dotnet publish ./src/Nancy.Metadata.Swagger.csproj -v quiet
 artifacts:
   - path: '**\*.nupkg'
 skip_commits:
