@@ -1,4 +1,4 @@
-version: '1.0.{build}'
+version: '0.1.1.{build}'
 image: Visual Studio 2017
 branches:
   only:
@@ -7,7 +7,6 @@ init:
   - cmd: git config --global core.autocrlf true
 before_build:
   - cmd: dotnet --version
-  - cmd: dotnet restore ./src/Nancy.Metadata.Swagger.csproj
 build_script:
   - cmd: dotnet publish ./src/Nancy.Metadata.Swagger.csproj
 artifacts:
