@@ -86,4 +86,4 @@ Since Swagger's latest standard is for OpenApi (Version 3.+), i would not be put
 
 
 [mit-img]: http://img.shields.io/badge/License-MIT-blue.svg
-[mit]: https://github.com/uber/prototool/blob/master/LICENSE
+[mit]: https://github.com/Jaxelr/Nancy.Metadata.Swagger.AspNetCore/blob/master/LICENSE
