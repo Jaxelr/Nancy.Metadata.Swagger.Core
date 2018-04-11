@@ -1,7 +1,7 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/aa0pljkj6db02696/branch/master?svg=true)](https://ci.appveyor.com/project/Jaxelr/nancy-metadata-swagger-aspnetcore/branch/master) [![NuGet](https://img.shields.io/nuget/v/Nancy.Metadata.Swagger.AspNetCore.svg)](https://www.nuget.org/packages/Nancy.Metadata.Swagger.AspNetCore)   [![Mit License][mit-img]][mit]
 
 # Nancy.Metadata.Swagger.AspNetCore 
-This is a port of an existing Nancy.Metadata.Swagger repository (https://github.com/HackandCraft/Nancy.Metadata.Swagger) but targeted to run on Net Standard 2.0. Most of the modifications have been minor tweaks and havent really affected the surface of the API in order to maintain certain backwards compatibility when targeting Nancy 2.+.
+This is a port of an existing Nancy.Metadata.Swagger repository (https://github.com/HackandCraft/Nancy.Metadata.Swagger) but targeted to run on Net Standard 1.6. Most of the modifications have been minor tweaks and havent really affected the surface of the API in order to maintain certain backwards compatibility when targeting Nancy 2.+.
 
 # Introduction
 
@@ -48,7 +48,7 @@ public class RootMetadataModule : MetadataModule<SwaggerRouteMetadata>
 }
 ```
 
-**!IMPORTANT: Metadata module file should be placed in the same namespace within the module for discovering purposes**
+** !IMPORTANT: Metadata module file should be placed in the same namespace within the module for discovering purposes**
 
 After doing this for each module as needed, we must proceed to configure the endpoint that will serve the documents described. 
 
