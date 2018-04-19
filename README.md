@@ -1,4 +1,4 @@
-[![Build status](https://ci.appveyor.com/api/projects/status/aa0pljkj6db02696/branch/master?svg=true)](https://ci.appveyor.com/project/Jaxelr/nancy-metadata-swagger-aspnetcore/branch/master) [![NuGet](https://img.shields.io/nuget/v/Nancy.Metadata.Swagger.AspNetCore.svg)](https://www.nuget.org/packages/Nancy.Metadata.Swagger.AspNetCore) [![Mit License][mit-img]][mit]
+[![Build status][build-svg]][build] [![NuGet][nuget-svg]][nuget] [![Mit License][mit-img]][mit]
 
 # Nancy.Metadata.Swagger.AspNetCore 
 This is a port of an existing Nancy.Metadata.Swagger repository (https://github.com/HackandCraft/Nancy.Metadata.Swagger) but targeted to run on Net Standard 1.6. Most of the modifications have been minor tweaks and havent really affected the surface of the API in order to maintain certain backwards compatibility when targeting Nancy 2.+.
@@ -87,3 +87,7 @@ Since Swagger's latest standard is for OpenApi (Version 3.+), i would not be put
 
 [mit-img]: http://img.shields.io/badge/License-MIT-blue.svg
 [mit]: https://github.com/Jaxelr/Nancy.Metadata.Swagger.AspNetCore/blob/master/LICENSE
+[build]: https://ci.appveyor.com/project/Jaxelr/nancy-metadata-swagger-aspnetcore/branch/master
+[build-svg]: https://ci.appveyor.com/api/projects/status/aa0pljkj6db02696/branch/master?svg=true
+[nuget]: https://www.nuget.org/packages/Nancy.Metadata.Swagger.AspNetCore
+[nuget-svg]: https://img.shields.io/nuget/v/Nancy.Metadata.Swagger.AspNetCore.svg
