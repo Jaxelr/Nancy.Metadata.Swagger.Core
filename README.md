@@ -87,7 +87,7 @@ Since Swagger's latest standard is for OpenApi (Version 3.+), i would not be put
 
 [mit-img]: http://img.shields.io/badge/License-MIT-blue.svg
 [mit]: https://github.com/Jaxelr/Nancy.Metadata.Swagger.AspNetCore/blob/master/LICENSE
-[build]: https://ci.appveyor.com/project/Jaxelr/nancy-metadata-swagger-aspnetcore/branch/master
-[build-svg]: https://ci.appveyor.com/api/projects/status/aa0pljkj6db02696/branch/master?svg=true
-[nuget]: https://www.nuget.org/packages/Nancy.Metadata.Swagger.AspNetCore
-[nuget-svg]: https://img.shields.io/nuget/v/Nancy.Metadata.Swagger.AspNetCore.svg
+[build]: https://ci.appveyor.com/project/Jaxelr/nancy-metadata-swagger-core/branch/master
+[build-svg]: https://ci.appveyor.com/api/projects/status/gkqlkxk28ig0r443/branch/master?svg=true
+[nuget]: https://www.nuget.org/packages/Nancy.Metadata.Swagger.Core
+[nuget-svg]: https://img.shields.io/nuget/v/Nancy.Metadata.Swagger.Core.svg
