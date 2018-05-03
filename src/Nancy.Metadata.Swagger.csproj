@@ -1,23 +1,23 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard1.6</TargetFramework>
-    <Version>0.1.1</Version>
+    <TargetFrameworks>netstandard1.6;net45</TargetFrameworks>
+    <Version>0.1.2</Version>
     <PackageId>Nancy.Metadata.Swagger.Core</PackageId>
     <Authors>Jaxel Rojas;Anton Kudryavtsev</Authors>
     <Title>Nancy.Metadata.Swagger.Core</Title>
     <Product>Nancy.Metadata.Swagger.Core</Product>
-    <Description>This is a port of the Nancy.Metadata.Swagger lib for Netstandard 1.6 functioning with nancy 2.+</Description>
+    <Description>This is a port of the Nancy.Metadata.Swagger that works for Nancy on all versions.</Description>
     <PackageLicenseUrl>https://opensource.org/licenses/MIT</PackageLicenseUrl>
     <PackageTags>nancyfx;swagger</PackageTags>
     <RepositoryUrl>https://github.com/Jaxelr/Nancy.Metadata.Swagger.Core</RepositoryUrl>
     <PackageProjectUrl>https://github.com/Jaxelr/Nancy.Metadata.Swagger.Core</PackageProjectUrl>
-    <AssemblyVersion>0.1.1.0</AssemblyVersion>
-    <FileVersion>0.1.1.0</FileVersion>
-    <PackageVersion>0.1.1</PackageVersion>
+    <AssemblyVersion>0.1.2</AssemblyVersion>
+    <FileVersion>0.1.2</FileVersion>
+    <PackageVersion>0.1.2</PackageVersion>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Copyright>2018</Copyright>
-    <PackageReleaseNotes>Lowering the compatibility version to net standard to 1.6</PackageReleaseNotes>
+    <PackageReleaseNotes>Lowering the compatibility to Nancy 1.X</PackageReleaseNotes>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <NeutralLanguage></NeutralLanguage>
     <Company />
@@ -26,8 +26,24 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Nancy" Version="2.0.0-clinteastwood" />
     <PackageReference Include="Newtonsoft.Json" Version="10.0.2" />
     <PackageReference Include="NJsonSchema" Version="9.10.19" />
   </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard1.6' ">
+    <PackageReference Include="Nancy" Version="2.0.0-clinteastwood" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'net45' ">
+    <PackageReference Include="Nancy" Version="1.4.4" />
+  </ItemGroup>
+  
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard1.6' ">
+    <DefineConstants>NETSTANDARD1_6</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <DefineConstants>NET45</DefineConstants>
+  </PropertyGroup>
+
 </Project>

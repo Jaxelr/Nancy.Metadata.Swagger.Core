@@ -34,7 +34,11 @@ namespace Nancy.Metadata.Swagger.Modules
             this.apiBaseUrl = apiBaseUrl;
             this.schemes = schemes;
 
+#if NETSTANDARD1_6
             Get(docsLocation, r => GetDocumentation());
+#else
+            Get[docsLocation] = r => GetDocumentation();
+#endif
         }
 
         public virtual Response GetDocumentation()

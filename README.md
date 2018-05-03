@@ -1,7 +1,7 @@
 [![Build status][build-svg]][build] [![NuGet][nuget-svg]][nuget] [![Mit License][mit-img]][mit]
 
-# Nancy.Metadata.Swagger.AspNetCore 
-This is a port of an existing Nancy.Metadata.Swagger repository (https://github.com/HackandCraft/Nancy.Metadata.Swagger) but targeted to run on Net Standard 1.6. Most of the modifications have been minor tweaks and havent really affected the surface of the API in order to maintain certain backwards compatibility when targeting Nancy 2.+.
+# Nancy.Metadata.Swagger.Core 
+This is a port of an existing Nancy.Metadata.Swagger repository (https://github.com/HackandCraft/Nancy.Metadata.Swagger) but updated to target to run on the latest version of NancyFx and also on Net Standard 1.6. Most of the modifications have been minor tweaks and havent really affected the surface of the API in order to maintain certain backwards compatibility when targeting Nancy 1.+ and 2.+.
 
 # Introduction
 
@@ -14,14 +14,14 @@ Also it uses some of Nancy libs, so it should be installed to.
 
 ## Gettings started
 
-First you need to install Nancy.Metadata.Swagger.AspNetCore and Nancy.Metadata.Modules nuget packages by:
+First you need to install Nancy.Metadata.Swagger.Core and Nancy.Metadata.Modules nuget packages by:
 
-	PM> Install-Package Nancy.Metadata.Modules -Version 2.0.0-clinteastwood 
-    PM> Install-Package Nancy.Metadata.Swagger.AspNetCore
+	PM> Install-Package Nancy.Metadata.Modules 
+    PM> Install-Package Nancy.Metadata.Swagger.Core
 
 *Keep in mind this library currently targets a prerelease version of Nancy. 
 
-Once this is done, locate your module implementations and generate a metadataModule with the descriptions.
+Once this is done, locate your module implementations and generate a MetadataModule with the descriptions.
 
 This is a sample implementation of of a Nancy Module:
 
@@ -86,7 +86,7 @@ Since Swagger's latest standard is for OpenApi (Version 3.+), i would not be put
 
 
 [mit-img]: http://img.shields.io/badge/License-MIT-blue.svg
-[mit]: https://github.com/Jaxelr/Nancy.Metadata.Swagger.AspNetCore/blob/master/LICENSE
+[mit]: https://github.com/Jaxelr/Nancy.Metadata.Swagger.Core/blob/master/LICENSE
 [build]: https://ci.appveyor.com/project/Jaxelr/nancy-metadata-swagger-core/branch/master
 [build-svg]: https://ci.appveyor.com/api/projects/status/gkqlkxk28ig0r443/branch/master?svg=true
 [nuget]: https://www.nuget.org/packages/Nancy.Metadata.Swagger.Core
