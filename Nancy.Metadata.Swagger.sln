@@ -5,9 +5,9 @@ VisualStudioVersion = 15.0.27130.2024
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nancy.Metadata.Swagger", "src\Nancy.Metadata.Swagger.csproj", "{5D00A219-9F98-498E-8A3F-F06449E3E864}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nancy.Metadata.Swagger.DemoApplication", "samples\Nancy.Metadata.Swagger.DemoApplication.csproj", "{2F0A9588-2611-421B-AECE-9C1EE0CC4885}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nancy.Metadata.Swagger.Core.DemoApplication", "samples\Nancy.Metadata.Swagger.Core.DemoApplication\Nancy.Metadata.Swagger.Core.DemoApplication.csproj", "{2F0A9588-2611-421B-AECE-9C1EE0CC4885}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{F9E7BCCF-1895-4234-AE87-9F4F2DE7EC83}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".SolutionItems", ".SolutionItems", "{F9E7BCCF-1895-4234-AE87-9F4F2DE7EC83}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
 		.gitignore = .gitignore
@@ -15,6 +15,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionIt
 		LICENSE = LICENSE
 		README.md = README.md
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{A3214450-31E6-4381-BFD2-23812714F576}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nancy.Metadata.Swagger.DemoApplication", "samples\Nancy.Metadata.Swagger.DemoApplication\Nancy.Metadata.Swagger.DemoApplication.csproj", "{A537003B-2A76-4A0D-8F08-7D66EC17E2F8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,9 +34,17 @@ Global
 		{2F0A9588-2611-421B-AECE-9C1EE0CC4885}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F0A9588-2611-421B-AECE-9C1EE0CC4885}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2F0A9588-2611-421B-AECE-9C1EE0CC4885}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A537003B-2A76-4A0D-8F08-7D66EC17E2F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A537003B-2A76-4A0D-8F08-7D66EC17E2F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A537003B-2A76-4A0D-8F08-7D66EC17E2F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A537003B-2A76-4A0D-8F08-7D66EC17E2F8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2F0A9588-2611-421B-AECE-9C1EE0CC4885} = {A3214450-31E6-4381-BFD2-23812714F576}
+		{A537003B-2A76-4A0D-8F08-7D66EC17E2F8} = {A3214450-31E6-4381-BFD2-23812714F576}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7CE3FFCB-AF8C-4D71-A7BA-B423860DB1F8}
