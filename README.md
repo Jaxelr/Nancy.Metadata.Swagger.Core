@@ -1,4 +1,4 @@
-[![Build status][build-svg]][build] [![NuGet][nuget-svg]][nuget] [![Mit License][mit-img]][mit]
+[![Build status][build-svg]][build] [![NuGet][nuget-svg]][nuget] [![MyGet][myget-img]][myget] [![Mit License][mit-img]][mit]
 
 # Nancy.Metadata.Swagger.Core 
 This is a port of an existing Nancy.Metadata.Swagger repository (https://github.com/HackandCraft/Nancy.Metadata.Swagger) but updated to target to run on the latest version of NancyFx and also on Net Standard 1.6. Most of the modifications have been minor tweaks and havent really affected the surface of the API in order to maintain certain backwards compatibility when targeting Nancy 1.+ and 2.+.
@@ -19,7 +19,7 @@ First you need to install Nancy.Metadata.Swagger.Core and Nancy.Metadata.Modules
 	PM> Install-Package Nancy.Metadata.Modules 
     PM> Install-Package Nancy.Metadata.Swagger.Core
 
-*Keep in mind this library currently targets a prerelease version of Nancy. 
+*Keep in mind this library works with the prerelease version 2.0 of Nancy, but you must specify the -Version option. 
 
 Once this is done, locate your module implementations and generate a MetadataModule with the descriptions.
 
@@ -91,3 +91,5 @@ Since Swagger's latest standard is for OpenApi (Version 3.+), i would not be put
 [build-svg]: https://ci.appveyor.com/api/projects/status/gkqlkxk28ig0r443/branch/master?svg=true
 [nuget]: https://www.nuget.org/packages/Nancy.Metadata.Swagger.Core
 [nuget-svg]: https://img.shields.io/nuget/v/Nancy.Metadata.Swagger.Core.svg
+[myget-img]: https://img.shields.io/myget/nancy-metadata-swagger/v/Nancy.Metadata.Swagger.Core.svg
+[myget]: https://www.myget.org/feed/nancy-metadata-swagger/package/nuget/Nancy.Metadata.Swagger.Core

@@ -5,6 +5,8 @@ branches:
   - master
 init:
   - cmd: git config --global core.autocrlf true
+configuration:
+  - Release
 before_build:
   - cmd: dotnet --version
 build_script:
