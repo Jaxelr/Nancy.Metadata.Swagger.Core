@@ -24,6 +24,15 @@ namespace Nancy.Metadata.Swagger.Model
 
         [JsonProperty("schema")]
         public SchemaRef Schema { get; set; }
+
+        [JsonProperty("items")]
+        public Item Item { get; set; }
+    }
+
+    public class Item
+    {
+        [JsonProperty("type")]
+        public string Type { get; set; }
     }
 
     public class SchemaRef

@@ -39,11 +39,19 @@ namespace Nancy.Metadata.Swagger.Fluent
 
         public static SwaggerEndpointInfo WithRequestParameter(this SwaggerEndpointInfo endpointInfo, string name,
             string type = "string", string format = null, bool required = true, string description = null,
-            string loc = "path")
+            string loc = "path", bool isArray = false)
         {
             if (endpointInfo.RequestParameters == null)
             {
                 endpointInfo.RequestParameters = new List<SwaggerRequestParameter>();
+            }
+
+            var item = new Item();
+
+            if (isArray)
+            {
+                item.Type = type;
+                type = "array";
             }
 
             endpointInfo.RequestParameters.Add(new SwaggerRequestParameter
@@ -53,7 +61,8 @@ namespace Nancy.Metadata.Swagger.Fluent
                 Format = format,
                 In = loc,
                 Name = name,
-                Type = type
+                Type = type,
+                Item = item
             });
 
             return endpointInfo;

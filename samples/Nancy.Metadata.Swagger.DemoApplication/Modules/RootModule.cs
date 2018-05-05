@@ -3,6 +3,7 @@ using Nancy.Metadata.Swagger.Core;
 using Nancy.Metadata.Swagger.DemoApplication.Model;
 using Nancy.Metadata.Swagger.Fluent;
 using Nancy.ModelBinding;
+using System.Linq;
 
 namespace Nancy.Metadata.Swagger.DemoApplication.Modules
 {
@@ -12,6 +13,7 @@ namespace Nancy.Metadata.Swagger.DemoApplication.Modules
         {
             Get["SimpleRequest", "/hello"] = r => HelloWorld();
             Get["SimpleRequestWithParameter", "/hello/{name}"] = r => Hello(r.name);
+            Get["SimpleRequestWithParameterArray", "/hello/{names}"] = r => Hello(r.names);
             Post["SimplePostRequest", "/hello"] = r => HelloPost();
             Post["PostRequestWithModel", "/hello/model"] = r => HelloModel();
             Post["PostRequestWithNestedModel", "/hello/nestedmodel"] = r => HelloNestedModel();
@@ -21,7 +23,7 @@ namespace Nancy.Metadata.Swagger.DemoApplication.Modules
         {
             NestedRequestModel model = this.Bind<NestedRequestModel>();
 
-            SimpleResponseModel response = new SimpleResponseModel
+            var response = new SimpleResponseModel
             {
                 Hello = $"Hello, {model.SimpleModel.Name}. We got your name from nested object"
             };
@@ -33,7 +35,7 @@ namespace Nancy.Metadata.Swagger.DemoApplication.Modules
         {
             SimpleRequestModel model = this.Bind<SimpleRequestModel>();
 
-            SimpleResponseModel response = new SimpleResponseModel
+            var response = new SimpleResponseModel
             {
                 Hello = $"Hello, {model.Name}"
             };
@@ -43,7 +45,7 @@ namespace Nancy.Metadata.Swagger.DemoApplication.Modules
 
         private Response HelloPost()
         {
-            SimpleResponseModel response = new SimpleResponseModel
+            var response = new SimpleResponseModel
             {
                 Hello = "Hello Post!"
             };
@@ -53,7 +55,7 @@ namespace Nancy.Metadata.Swagger.DemoApplication.Modules
 
         private Response Hello(string name)
         {
-            SimpleResponseModel response = new SimpleResponseModel
+            var response = new SimpleResponseModel
             {
                 Hello = $"Hello, {name}"
             };
@@ -61,9 +63,20 @@ namespace Nancy.Metadata.Swagger.DemoApplication.Modules
             return Response.AsJson(response);
         }
 
+        private Response Hello(string[] names)
+        {
+            var response = new SimpleResponseModel
+            {
+                Hello = names.Aggregate((c, n) => string.Concat(c, " , ", n))
+            };
+
+            return Response.AsJson(response);
+        }
+
+
         private Response HelloWorld()
         {
-            SimpleResponseModel response = new SimpleResponseModel
+            var response = new SimpleResponseModel
             {
                 Hello = "Hello World!"
             };
@@ -84,6 +97,11 @@ namespace Nancy.Metadata.Swagger.DemoApplication.Modules
                 .With(i => i.WithResponseModel("200", typeof(SimpleResponseModel), "Sample response")
                             .WithRequestParameter("name")
                             .WithSummary("Simple GET with parameters"));
+
+            Describe["SimpleRequestWithParameterArray"] = desc => new SwaggerRouteMetadata(desc)
+                .With(i => i.WithResponseModel("200", typeof(SimpleResponseModel), "Sample response")
+                .WithRequestParameter("names", type: "array", loc: "path")
+                .WithSummary("Simple GET with array parameters"));
 
             Describe["SimplePostRequest"] = desc => new SwaggerRouteMetadata(desc)
                 .With(info => info.WithResponseModel("200", typeof(SimpleResponseModel), "Sample response")
