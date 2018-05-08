@@ -8,18 +8,14 @@ namespace Nancy.Metadata.Swagger.Core
     public class CustomJsonConverter : JsonConverter
     {
         public override bool CanConvert(Type objectType)
-        {
-            return objectType == typeof(Dictionary<string, NJsonSchema.JsonSchema4>);
-        }
+            => objectType == typeof(Dictionary<string, NJsonSchema.JsonSchema4>);
 
         public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
-        {
-            throw new NotImplementedException();
-        }
+            => new NotImplementedException();
 
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
         {
-            JObject j = new JObject();
+            var j = new JObject();
 
             // Rather crude hack to have all necessary type definitions on one level.
             // The good thing is that it's save: as we use Type.FullName as

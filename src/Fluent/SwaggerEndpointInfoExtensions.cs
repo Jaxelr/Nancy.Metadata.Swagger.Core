@@ -124,24 +124,20 @@ namespace Nancy.Metadata.Swagger.Fluent
         }
 
         private static SwaggerResponseInfo GenerateResponseInfo(string description, Type responseType)
-        {
-            return new SwaggerResponseInfo
-            {
-                Schema = new SchemaRef
-                {
-                    Ref = "#/definitions/" + GetOrSaveSchemaReference(responseType)
-                },
-                Description = description
-            };
-        }
+           => new SwaggerResponseInfo
+           {
+               Schema = new SchemaRef
+               {
+                   Ref = "#/definitions/" + GetOrSaveSchemaReference(responseType)
+               },
+               Description = description
+           };
 
         private static SwaggerResponseInfo GenerateResponseInfo(string description)
-        {
-            return new SwaggerResponseInfo
+            => new SwaggerResponseInfo
             {
                 Description = description
             };
-        }
 
         private static string GetOrSaveSchemaReference(Type type)
         {

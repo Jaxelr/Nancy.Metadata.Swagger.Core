@@ -20,6 +20,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{A321
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nancy.Metadata.Swagger.DemoApplication", "samples\Nancy.Metadata.Swagger.DemoApplication\Nancy.Metadata.Swagger.DemoApplication.csproj", "{A537003B-2A76-4A0D-8F08-7D66EC17E2F8}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{164996DB-961C-4E15-8B53-87DB746932CC}"
+	ProjectSection(SolutionItems) = preProject
+		.github\CONTRIBUTING.md = .github\CONTRIBUTING.md
+		.github\ISSUE_TEMPLATE.md = .github\ISSUE_TEMPLATE.md
+		.github\PULL_REQUEST_TEMPLATE.md = .github\PULL_REQUEST_TEMPLATE.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +52,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{2F0A9588-2611-421B-AECE-9C1EE0CC4885} = {A3214450-31E6-4381-BFD2-23812714F576}
 		{A537003B-2A76-4A0D-8F08-7D66EC17E2F8} = {A3214450-31E6-4381-BFD2-23812714F576}
+		{164996DB-961C-4E15-8B53-87DB746932CC} = {F9E7BCCF-1895-4234-AE87-9F4F2DE7EC83}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7CE3FFCB-AF8C-4D71-A7BA-B423860DB1F8}
