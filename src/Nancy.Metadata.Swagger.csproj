@@ -16,8 +16,8 @@
     <FileVersion>0.2.0</FileVersion>
     <PackageVersion>0.2.0</PackageVersion>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Copyright>2018</Copyright>
-    <PackageReleaseNotes>Lowering the compatibility to Nancy 1.X</PackageReleaseNotes>
+    <Copyright>2019</Copyright>
+    <PackageReleaseNotes>Targeting Nancy 2.0</PackageReleaseNotes>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <NeutralLanguage></NeutralLanguage>
     <Company />
