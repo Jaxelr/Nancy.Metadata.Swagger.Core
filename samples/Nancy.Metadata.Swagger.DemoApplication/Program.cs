@@ -1,21 +1,20 @@
-﻿using System;
-using Nancy.Hosting.Self;
+﻿using Microsoft.AspNetCore.Hosting;
+using System.IO;
 
 namespace Nancy.Metadata.Swagger.DemoApplication
 {
     public class Program
     {
-        private static void Main()
+        public static void Main(string[] args)
         {
-            string url = "http://localhost:5000";
+            var host = new WebHostBuilder()
+                  .UseKestrel()
+                  .UseContentRoot(Directory.GetCurrentDirectory())
+                  .UseIISIntegration()
+                  .UseStartup<Startup>()
+                  .Build();
 
-            NancyHost host = new NancyHost(new Uri(url));
-            host.Start();
-
-            Console.WriteLine("Nancy host is listening at {0}", url);
-            Console.WriteLine("Press <Enter> to exit");
-
-            Console.ReadLine();
+            host.Run();
         }
     }
 }
