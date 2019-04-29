@@ -3,6 +3,7 @@ using Nancy.Metadata.Swagger.Core;
 using Nancy.Metadata.Swagger.DemoApplication.Model;
 using Nancy.Metadata.Swagger.Fluent;
 using Nancy.ModelBinding;
+using System;
 
 namespace Nancy.Metadata.Swagger.DemoApplication.Modules
 {
@@ -46,7 +47,7 @@ namespace Nancy.Metadata.Swagger.DemoApplication.Modules
                      .WithStatusCode(HttpStatusCode.BadRequest);
             }
 
-            catch (System.NullReferenceException ex)
+            catch (NullReferenceException)
             {
                 return Response
                 .AsJson(new ValidationFailedResponseModel("The body contains an invalid nested request model."))
@@ -81,7 +82,7 @@ namespace Nancy.Metadata.Swagger.DemoApplication.Modules
                      .WithStatusCode(HttpStatusCode.BadRequest);
             }
 
-            catch (System.Exception ex)
+            catch (Exception ex)
             {
                 return Response
                 .AsJson(new ValidationFailedResponseModel(ex.Message))
