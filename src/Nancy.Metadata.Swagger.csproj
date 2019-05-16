@@ -27,7 +27,7 @@
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
-    <PackageReference Include="NJsonSchema" Version="9.13.37" />
+    <PackageReference Include="NJsonSchema" Version="9.14.1" />
     <PackageReference Include="Nancy" Version="2.0.0" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
