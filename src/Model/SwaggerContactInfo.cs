@@ -9,5 +9,8 @@ namespace Nancy.Metadata.Swagger.Model
 
         [JsonProperty("url")]
         public string Url { get; set; }
+
+        [JsonProperty("email")]
+        public string EmailAddress { get; set; }
     }
 }
