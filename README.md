@@ -11,7 +11,7 @@ Nancy.Metadata.Swagger is a library that makes it easier to create API documenta
 ## Dependencies
 
 Nancy.Metadata.Swagger uses [Newtonsoft Json.Net](https://www.newtonsoft.com/json) and [NJsonSchema for .Net](https://github.com/RSuter/NJsonSchema) to generate objects schema.
-Also it uses some of Nancy libs, so it should be installed to.
+Also it uses some of Nancy libs, so those should be installed as well.
 
 ## Gettings started
 
