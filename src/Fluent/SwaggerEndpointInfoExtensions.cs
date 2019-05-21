@@ -20,10 +20,8 @@ namespace Nancy.Metadata.Swagger.Fluent
             return endpointInfo;
         }
 
-        public static SwaggerEndpointInfo WithDefaultResponse(this SwaggerEndpointInfo endpointInfo, Type responseType, string description = "Default response")
-        {
-            return endpointInfo.WithResponseModel("200", responseType, description);
-        }
+        public static SwaggerEndpointInfo WithDefaultResponse(this SwaggerEndpointInfo endpointInfo, Type responseType, string description = "Default response") =>
+         endpointInfo.WithResponseModel("200", responseType, description);
 
         public static SwaggerEndpointInfo WithResponse(this SwaggerEndpointInfo endpointInfo, string statusCode, string description)
         {
@@ -148,11 +146,10 @@ namespace Nancy.Metadata.Swagger.Fluent
                 return key;
             }
 
-            var schema = JsonSchema4.FromTypeAsync(type, new NJsonSchema.Generation.JsonSchemaGeneratorSettings
+            var schema = JsonSchema.FromTypeAsync(type, new NJsonSchema.Generation.JsonSchemaGeneratorSettings
             {
                 SchemaType = SchemaType.Swagger2,
-                TypeNameGenerator = new TypeNameGenerator(),
-                SchemaNameGenerator = new TypeNameGenerator()
+                TypeNameGenerator = new TypeNameGenerator()
             });
 
             SchemaCache.Cache[key] = schema.Result;

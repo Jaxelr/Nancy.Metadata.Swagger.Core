@@ -1,12 +1,13 @@
 ﻿using Newtonsoft.Json;
 using System.Collections.Generic;
+using NJsonSchema;
 
 namespace Nancy.Metadata.Swagger.Model
 {
     public class SwaggerSpecification
     {
         [JsonProperty("swagger")]
-        public string SwaggerVersion { get { return "2.0"; } }
+        public string SwaggerVersion => "2.0";
 
         [JsonProperty("info")]
         public SwaggerApiInfo ApiInfo { get; set; }
@@ -24,6 +25,6 @@ namespace Nancy.Metadata.Swagger.Model
         public Dictionary<string, Dictionary<string, SwaggerEndpointInfo>> PathInfos { get; set; }
 
         [JsonProperty("definitions"), JsonConverter(typeof(Core.CustomJsonConverter))]
-        public Dictionary<string, NJsonSchema.JsonSchema4> ModelDefinitions { get; set; }
+        public Dictionary<string, JsonSchema> ModelDefinitions { get; set; }
     }
 }
