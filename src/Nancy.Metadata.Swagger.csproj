@@ -8,7 +8,6 @@
     <Title>Nancy.Metadata.Swagger.Core</Title>
     <Product>Nancy.Metadata.Swagger.Core</Product>
     <Description>This is a port of the Nancy.Metadata.Swagger that works for Nancy on all versions.</Description>
-    <PackageLicenseUrl>https://opensource.org/licenses/MIT</PackageLicenseUrl>
     <PackageTags>nancyfx;swagger</PackageTags>
     <RepositoryUrl>https://github.com/Jaxelr/Nancy.Metadata.Swagger.Core</RepositoryUrl>
     <PackageProjectUrl>https://github.com/Jaxelr/Nancy.Metadata.Swagger.Core</PackageProjectUrl>
@@ -22,6 +21,10 @@
     <RootNamespace>Nancy.Metadata.Swagger</RootNamespace>
     <AssemblyName>Nancy.Metadata.Swagger</AssemblyName>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\LICENSE" Pack="true" PackagePath="LICENSE" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
