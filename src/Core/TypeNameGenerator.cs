@@ -46,12 +46,12 @@ namespace Nancy.Metadata.Swagger.Core
         public static string GetFriendlyName(this Type type) => type.GetFriendlyName(DefaultDictionary);
     }
 
-    public class TypeNameGenerator : ITypeNameGenerator, ISchemaNameGenerator
+    public class TypeNameGenerator : ITypeNameGenerator
     {
         public string Generate(Type type) => type.GetFriendlyName();
 
-        public string Generate(JsonSchema4 schema, string typeNameHint) => typeNameHint;
+        public string Generate(JsonSchema schema, string typeNameHint) => typeNameHint;
 
-        public string Generate(JsonSchema4 schema, string typeNameHint, IEnumerable<string> reservedTypeNames) => typeNameHint;
+        public string Generate(JsonSchema schema, string typeNameHint, IEnumerable<string> reservedTypeNames) => typeNameHint;
     }
 }

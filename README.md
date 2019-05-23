@@ -2,7 +2,7 @@
 
 [![Build status][build-svg]][build] [![NuGet][nuget-svg]][nuget] [![MyGet][myget-img]][myget] [![Mit License][mit-img]][mit]
 
-This is a port of an existing Nancy.Metadata.Swagger [repository](https://github.com/HackandCraft/Nancy.Metadata.Swagger) but updated to target to run on the latest version of NancyFx and also on Net Standard 1.6. Most of the modifications have been minor tweaks and havent really affected the surface of the API in order to maintain certain backwards compatibility when targeting Nancy 1.+ and 2.+.
+This is a port of an existing Nancy.Metadata.Swagger [repository](https://github.com/HackandCraft/Nancy.Metadata.Swagger) but updated to target the latest version of NancyFx and also on Net Standard 2.0. Most of the modifications have been minor tweaks and havent really affected the surface of the API in order to maintain certain backwards compatibility when targeting Nancy 1.+ and 2.+.
 
 ## Introduction
 
@@ -11,7 +11,7 @@ Nancy.Metadata.Swagger is a library that makes it easier to create API documenta
 ## Dependencies
 
 Nancy.Metadata.Swagger uses [Newtonsoft Json.Net](https://www.newtonsoft.com/json) and [NJsonSchema for .Net](https://github.com/RSuter/NJsonSchema) to generate objects schema.
-Also it uses some of Nancy libs, so it should be installed to.
+Also it uses some of Nancy libs, so those should be installed as well.
 
 ## Gettings started
 
@@ -19,8 +19,6 @@ First you need to install Nancy.Metadata.Swagger.Core and Nancy.Metadata.Modules
 
     PM> Install-Package Nancy.Metadata.Modules
     PM> Install-Package Nancy.Metadata.Swagger.Core
-
-*Keep in mind this library works with the prerelease version 2.0 of Nancy, but you must specify the -Version option.
 
 Once this is done, locate your module implementations and generate a MetadataModule with the descriptions.
 
@@ -35,7 +33,6 @@ public class RootModule : NancyModule
     }
 }
 ```
-
 The example metadata module (for ``%modulename%Module`` should be named ``%modulename%MetadataModule``):
 
 ```c#
@@ -76,15 +73,17 @@ public class DocsModule : SwaggerDocsModuleBase
 }
 ```
 
-Default values are provided, but I strongly suggest you configure yours obtaning them from config files or environment vars.
+Default values are provided, but I strongly suggest you configure your own obtaining them from config files or environment vars.
 
 ### Adding swagger UI
 
-Now (this is completely optional and its mostly for discovery purposes) you are able to add Swagger-UI (you can download it from [swagger-ui](http://swagger.io/swagger-ui/) or check the github [repository here](https://github.com/swagger-api/swagger-ui) or heck use [npm](https://www.npmjs.com/package/swagger-ui)) and point it to your document module. At the index.html file you can set the default url where swagger-ui should get the json documentation file. This repo contains a Demo App to see an usage example.
+(this is completely optional and its mostly for discovery purposes) 
+
+Now you are able to add Swagger-UI (you can download it from [swagger-ui](http://swagger.io/swagger-ui/) or check the github [repository here](https://github.com/swagger-api/swagger-ui) or heck use [npm](https://www.npmjs.com/package/swagger-ui)) and point it to your document module. At the index.html file you can set the default url where swagger-ui should get the json documentation file. This repo contains a Demo App that demostrates the usage.
 
 ### Missing Swagger features
 
-Since Swagger's latest standard is for OpenApi (Version 3.+), i would not be putting any type of effort into adding enhancements to this library, since the functionality mostly covers my current needs. I will probably just take care of bumps to the release version of netcore for Nancy, Swagger-UI and any bugs found. By all means, Feel free to Clone and PR away if you would like to add any new features.
+Since Swagger's latest standard is for OpenApi (Version 3.+), i would not be putting any type of effort into adding enhancements to this library, since the functionality mostly covers my current needs. I will take care of bumps to the release version of netcore for Nancy, Swagger-UI and any bugs found. By all means, Feel free to Clone and PR away if you would like to add any new features.
 
 [mit-img]: http://img.shields.io/badge/License-MIT-blue.svg
 [mit]: https://github.com/Jaxelr/Nancy.Metadata.Swagger.Core/blob/master/LICENSE

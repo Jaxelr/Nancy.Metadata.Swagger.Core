@@ -8,7 +8,7 @@ namespace Nancy.Metadata.Swagger.Core
     public class CustomJsonConverter : JsonConverter
     {
         public override bool CanConvert(Type objectType)
-            => objectType == typeof(Dictionary<string, NJsonSchema.JsonSchema4>);
+            => objectType == typeof(Dictionary<string, NJsonSchema.JsonSchema>);
 
         public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
             => new NotImplementedException();
@@ -22,7 +22,7 @@ namespace Nancy.Metadata.Swagger.Core
             // schema type name, there shouldn't be any conflicts, if two requests have
             // same submodel of Namespace.SpecificType type, they are guaranteed to be the
             // same type
-            foreach (var pair in (value as Dictionary<string, NJsonSchema.JsonSchema4>))
+            foreach (var pair in (value as Dictionary<string, NJsonSchema.JsonSchema>))
             {
                 var el = JObject.Parse(pair.Value.ToJson());
 
