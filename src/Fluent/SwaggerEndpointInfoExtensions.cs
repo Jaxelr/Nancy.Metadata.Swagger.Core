@@ -139,6 +139,12 @@ namespace Nancy.Metadata.Swagger.Fluent
             return endpointInfo;
         }
 
+        public static SwaggerEndpointInfo WithTags(this SwaggerEndpointInfo endpointInfo, IEnumerable<string> tags)
+        {
+            endpointInfo.Tags = tags.ToArray();
+            return endpointInfo;
+        }
+
         private static SwaggerResponseInfo GenerateResponseInfo(string description, Type responseType)
            => new SwaggerResponseInfo
            {
