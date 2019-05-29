@@ -146,13 +146,13 @@ namespace Nancy.Metadata.Swagger.Fluent
                 return key;
             }
 
-            var schema = JsonSchema.FromTypeAsync(type, new NJsonSchema.Generation.JsonSchemaGeneratorSettings
+            var schema = JsonSchema.FromType(type, new NJsonSchema.Generation.JsonSchemaGeneratorSettings
             {
                 SchemaType = SchemaType.Swagger2,
                 TypeNameGenerator = new TypeNameGenerator()
             });
 
-            SchemaCache.Cache[key] = schema.Result;
+            SchemaCache.Cache[key] = schema;
 
             return key;
         }
