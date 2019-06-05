@@ -15,17 +15,13 @@
     <FileVersion>0.3.1</FileVersion>
     <PackageVersion>0.3.1</PackageVersion>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Copyright>2019</Copyright>
+    <Copyright>Copyright 2019</Copyright>
     <PackageReleaseNotes>Upgrade to libraries dependencies</PackageReleaseNotes>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <RootNamespace>Nancy.Metadata.Swagger</RootNamespace>
     <AssemblyName>Nancy.Metadata.Swagger</AssemblyName>
   </PropertyGroup>
-
-  <ItemGroup>
-    <None Include="..\LICENSE" Pack="true" PackagePath="LICENSE" />
-  </ItemGroup>
-
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
     <PackageReference Include="NJsonSchema" Version="10.0.13" />
