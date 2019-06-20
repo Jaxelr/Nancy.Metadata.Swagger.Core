@@ -34,7 +34,7 @@ namespace Nancy.Metadata.Swagger.Modules
             this.apiBaseUrl = apiBaseUrl;
             this.schemes = schemes;
 
-            Get(docsLocation, r => GetDocumentation());
+            Get(docsLocation, r => GetDocumentation(), null, "GetSwaggerDocumentation");
         }
 
         public virtual Response GetDocumentation()
