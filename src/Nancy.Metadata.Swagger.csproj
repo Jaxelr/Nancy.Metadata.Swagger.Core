@@ -2,19 +2,15 @@
 
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;net452</TargetFrameworks>
-    <Version>0.3.2</Version>
     <PackageId>Nancy.Metadata.Swagger.Core</PackageId>
     <Authors>Jaxel Rojas;Anton Kudryavtsev</Authors>
     <Title>Nancy.Metadata.Swagger.Core</Title>
     <Product>Nancy.Metadata.Swagger.Core</Product>
-    <Description>This is a port of the Nancy.Metadata.Swagger that works for Nancy on all versions.</Description>
+    <Description>This is a port of the Nancy.Metadata.Swagger that works for Nancy on all versions</Description>
     <PackageTags>nancyfx;swagger</PackageTags>
     <RepositoryUrl>https://github.com/Jaxelr/Nancy.Metadata.Swagger.Core</RepositoryUrl>
     <PackageProjectUrl>https://github.com/Jaxelr/Nancy.Metadata.Swagger.Core</PackageProjectUrl>
     <PackageIconUrl>https://raw.githubusercontent.com/Jaxelr/Nancy.Metadata.Swagger.Core/master/icon.png</PackageIconUrl>
-    <AssemblyVersion>0.3.2</AssemblyVersion>
-    <FileVersion>0.3.2</FileVersion>
-    <PackageVersion>0.3.2</PackageVersion>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Copyright>Copyright 2019</Copyright>
     <PackageReleaseNotes>Upgrade to libraries dependencies</PackageReleaseNotes>
@@ -22,6 +18,7 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <RootNamespace>Nancy.Metadata.Swagger</RootNamespace>
     <AssemblyName>Nancy.Metadata.Swagger</AssemblyName>
+    <Version>0.3.3</Version>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
