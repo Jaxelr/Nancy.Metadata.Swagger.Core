@@ -11,18 +11,17 @@ Nancy.Metadata.Swagger is a library that makes it easier to create API documenta
 ## Dependencies
 
 Nancy.Metadata.Swagger uses [Newtonsoft Json.Net](https://www.newtonsoft.com/json) and [NJsonSchema for .Net](https://github.com/RSuter/NJsonSchema) to generate objects schema.
-Also it uses some of Nancy libs, so those should be installed as well.
+Also it uses some of Nancy libs, so those will be installed as well as part of the dependencies.
 
 ## Gettings started
 
-First you need to install Nancy.Metadata.Swagger.Core and Nancy.Metadata.Modules nuget packages by:
+Install Nancy.Metadata.Swagger.Core via nuget packages:
 
-    PM> Install-Package Nancy.Metadata.Modules
     PM> Install-Package Nancy.Metadata.Swagger.Core
 
 Once this is done, locate your module implementations and generate a MetadataModule with the descriptions.
 
-This is a sample implementation of of a Nancy Module:
+This is a sample implementation of a Nancy Module:
 
 ```c#
 public class RootModule : NancyModule
@@ -47,13 +46,13 @@ public class RootMetadataModule : MetadataModule<SwaggerRouteMetadata>
 }
 ```
 
-** !IMPORTANT: Metadata module file should be placed in the same namespace within the module for discovering purposes**
+** !IMPORTANT: Metadata module class should be placed in the same namespace within the module for discovering purposes**
 
-After doing this for each module as needed, we must proceed to configure the endpoint that will serve the documents described.
+After doing this for each module desired, we must proceed to configure the endpoint that will serve the documents described.
 
 ## Adding the docs module
 
-This module  will return your json documentation. The key is the inheritance from SwaggerDocsModuleBase.
+This module will return your json documentation. The key is the inheritance from SwaggerDocsModuleBase.
 
 Here's a sample module:
 
@@ -73,13 +72,12 @@ public class DocsModule : SwaggerDocsModuleBase
 }
 ```
 
-Default values are provided, but I strongly suggest you configure your own obtaining them from config files or environment vars.
+Default values are provided, but I strongly suggest you configure your own obtaining them from config files or environment vars (see the sample).
 
 ### Adding swagger UI
 
-(this is completely optional and its mostly for discovery purposes) 
-
-Now you are able to add Swagger-UI (you can download it from [swagger-ui](http://swagger.io/swagger-ui/) or check the github [repository here](https://github.com/swagger-api/swagger-ui) or heck use [npm](https://www.npmjs.com/package/swagger-ui)) and point it to your document module. At the index.html file you can set the default url where swagger-ui should get the json documentation file. This repo contains a Demo App that demostrates the usage.
+This is completely optional and its mostly for discovery purposes. You have the ability to add Swagger-UI (you can download it from [swagger-ui](http://swagger.io/swagger-ui/) or check the github [repository here](https://github.com/swagger-api/swagger-ui) or heck use [npm](https://www.npmjs.com/package/swagger-ui)) and point it to your document module. At the index.html file you can set the default url where swagger-ui should get the json documentation file. 
+For more details check the sample application.
 
 ### Missing Swagger features
 
