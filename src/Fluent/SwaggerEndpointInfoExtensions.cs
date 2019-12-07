@@ -3,6 +3,7 @@ using Nancy.Metadata.Swagger.Model;
 using NJsonSchema;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Nancy.Metadata.Swagger.Fluent
 {
@@ -36,8 +37,10 @@ namespace Nancy.Metadata.Swagger.Fluent
         }
 
         public static SwaggerEndpointInfo WithRequestParameter(this SwaggerEndpointInfo endpointInfo, string name,
-            string type = "string", string format = null, bool required = true, string description = null,
-            string loc = "path", bool isArray = false)
+            string type = "string", string format = null, bool required = true, string description = null, object defaultValue = null,
+            long? maximum = null, bool? exclusiveMaximum = null, long? minimum = null, bool? exclusiveMinimum = null,
+            long? maxLength = null, long? minLength = null, int? maxItems = null, int? minItems = null,
+            string pattern = null, bool? uniqueItems = null, IEnumerable<string> enumValue = null, int? multipleOf = null,  string loc = "path", bool isArray = false)
         {
             if (endpointInfo.RequestParameters == null)
             {
@@ -60,7 +63,20 @@ namespace Nancy.Metadata.Swagger.Fluent
                 In = loc,
                 Name = name,
                 Type = type,
-                Item = item
+                Item = item,
+                Default = defaultValue,
+                Maximum = maximum,
+                ExclusiveMaximum = exclusiveMaximum,
+                Minimum = minimum,
+                ExclusiveMinimum = exclusiveMinimum,
+                MaxLength = maxLength,
+                MinLength = minLength,
+                MaxItems = maxItems,
+                MinItems = minItems,
+                Pattern = pattern,
+                UniqueItems = uniqueItems,
+                Enum = enumValue,
+                MultipleOf = multipleOf,
             });
 
             return endpointInfo;
@@ -118,6 +134,12 @@ namespace Nancy.Metadata.Swagger.Fluent
         public static SwaggerEndpointInfo WithSummary(this SwaggerEndpointInfo endpointInfo, string summary)
         {
             endpointInfo.Summary = summary;
+            return endpointInfo;
+        }
+
+        public static SwaggerEndpointInfo WithTags(this SwaggerEndpointInfo endpointInfo, IEnumerable<string> tags)
+        {
+            endpointInfo.Tags = tags.ToArray();
             return endpointInfo;
         }
 

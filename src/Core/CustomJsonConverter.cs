@@ -32,15 +32,16 @@ namespace Nancy.Metadata.Swagger.Core
                 {
                     foreach (JProperty content in el.GetValue("definitions"))
                     {
-                        j.Remove(content.Name);
-                        j.Add(content.Name, content.Value);
+                        if (!j.ContainsKey(content.Name))
+                            j.Add(content.Name, content.Value);
                     }
                 }
 
                 el.Remove("definitions");
                 el.Remove("$schema");
 
-                j.Add(pair.Key, el);
+                if(!j.ContainsKey(pair.Key))
+                    j.Add(pair.Key, el);
             }
 
             j.WriteTo(writer);
