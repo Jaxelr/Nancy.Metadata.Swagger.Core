@@ -139,7 +139,7 @@ namespace Nancy.Metadata.Swagger.Fluent
 
         public static SwaggerEndpointInfo WithTags(this SwaggerEndpointInfo endpointInfo, IEnumerable<string> tags)
         {
-            endpointInfo.Tags = tags.ToArray();
+            endpointInfo.Tags = tags?.ToArray();
             return endpointInfo;
         }
 
