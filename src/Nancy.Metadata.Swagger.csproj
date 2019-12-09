@@ -10,7 +10,7 @@
     <PackageTags>nancyfx;swagger</PackageTags>
     <RepositoryUrl>https://github.com/Jaxelr/Nancy.Metadata.Swagger.Core</RepositoryUrl>
     <PackageProjectUrl>https://github.com/Jaxelr/Nancy.Metadata.Swagger.Core</PackageProjectUrl>
-    <PackageIconUrl>https://raw.githubusercontent.com/Jaxelr/Nancy.Metadata.Swagger.Core/master/icon.png</PackageIconUrl>
+    <PackageIcon>icon.png</PackageIcon>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Copyright>Copyright 2019</Copyright>
     <PackageReleaseNotes>Upgrade to libraries dependencies</PackageReleaseNotes>
@@ -18,8 +18,11 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <RootNamespace>Nancy.Metadata.Swagger</RootNamespace>
     <AssemblyName>Nancy.Metadata.Swagger</AssemblyName>
-    <Version>0.3.3</Version>
+    <Version>0.3.4</Version>
   </PropertyGroup>
+  <ItemGroup>
+    <None Include="..\icon.png" Pack="true" PackagePath="" />
+  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <PackageReference Include="NJsonSchema" Version="10.0.28" />
