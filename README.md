@@ -2,16 +2,15 @@
 
 [![Build status][build-svg]][build] [![NuGet][nuget-svg]][nuget] [![MyGet][myget-img]][myget] [![Mit License][mit-img]][mit]
 
-This is a port of an existing Nancy.Metadata.Swagger [repository](https://github.com/HackandCraft/Nancy.Metadata.Swagger) but updated to target the latest version of NancyFx and also on Net Standard 2.0. Most of the modifications have been minor tweaks and havent really affected the surface of the API in order to maintain certain backwards compatibility when targeting Nancy 1.+ and 2.+.
+This is a port of the existing [Nancy.Metadata.Swagger repository](https://github.com/HackandCraft/Nancy.Metadata.Swagger) but updated to target the latest version of NancyFx and also targeting NetStandard 2.0. Most of the modifications have been minor tweaks and havent really affected the surface of the API in order to maintain backwards compatibility when targeting Nancy 1.+ and 2.+.
 
 ## Introduction
 
-Nancy.Metadata.Swagger is a library that makes it easier to create API documentation for [swagger 2.0](http://swagger.io/) with Nancy metadata modules. This targets exclusively the 2.0 Swagger specification. For a version that targets Open Api 3.0.0, check the following [library](https://github.com/Jaxelr/Nancy.Metadata.OpenApi).
+Nancy.Metadata.Swagger is a library that makes it easier to create API documentation for [swagger 2.0](http://swagger.io/) with Nancy metadata modules. This targets exclusively the 2.0 Swagger specification. For an updated version that targets OpenApi 3.0.0, check the following [library](https://github.com/Jaxelr/Nancy.Metadata.OpenApi).
 
 ## Dependencies
 
-Nancy.Metadata.Swagger uses [Newtonsoft Json.Net](https://www.newtonsoft.com/json) and [NJsonSchema for .Net](https://github.com/RSuter/NJsonSchema) to generate objects schema.
-Also it uses some of Nancy libs, so those will be installed as well as part of the dependencies.
+Nancy.Metadata.Swagger uses [Newtonsoft Json.Net](https://www.newtonsoft.com/json) and [NJsonSchema for .Net](https://github.com/RSuter/NJsonSchema) to generate the object schema structure. Also it uses some of Nancy libraries, so those will be installed as well as part of the dependencies.
 
 ## Gettings started
 
@@ -46,9 +45,9 @@ public class RootMetadataModule : MetadataModule<SwaggerRouteMetadata>
 }
 ```
 
-** !IMPORTANT: Metadata module class should be placed in the same namespace within the module for discovering purposes**
+** !IMPORTANT: Metadata module class should be placed at the same namespace within the module for discovering purposes**
 
-After doing this for each module desired, we must proceed to configure the endpoint that will serve the documents described.
+After doing this for each module desired, configure the endpoint that will serve the documents described.
 
 ## Adding the docs module
 
@@ -72,11 +71,11 @@ public class DocsModule : SwaggerDocsModuleBase
 }
 ```
 
-Default values are provided, but I strongly suggest you configure your own obtaining them from config files or environment vars (see the sample).
+Default values are provided, but it is encouraged that you configure your own values, obtaining them from config files or environment vars (see the sample).
 
 ### Adding swagger UI
 
-This is completely optional and its mostly for discovery purposes. You have the ability to add Swagger-UI (you can download it from [swagger-ui](http://swagger.io/swagger-ui/) or check the github [repository here](https://github.com/swagger-api/swagger-ui) or heck use [npm](https://www.npmjs.com/package/swagger-ui)) and point it to your document module. At the index.html file you can set the default url where swagger-ui should get the json documentation file. 
+This is completely optional and its mostly for discovery purposes. It is feasible to add Swagger-UI (you can download it from [swagger-ui](http://swagger.io/swagger-ui/) or check the [github repository here](https://github.com/swagger-api/swagger-ui) or heck, use [npm](https://www.npmjs.com/package/swagger-ui)) and point it to your document module. At the index.html file you can set the default url where swagger-ui should get the json documentation file. 
 For more details check the sample application.
 
 ### Missing Swagger features
