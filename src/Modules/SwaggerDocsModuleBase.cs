@@ -33,8 +33,11 @@ namespace Nancy.Metadata.Swagger.Modules
             this.host = host;
             this.apiBaseUrl = apiBaseUrl;
             this.schemes = schemes;
-
-            Get(docsLocation, r => GetDocumentation(), null, "GetSwaggerDocumentation");
+#if NETSTANDARD2_0
+            Get(docsLocation, _ => GetDocumentation(), null, "GetSwaggerDocumentation");
+#else
+            Get[docsLocation] = _ => GetDocumentation();
+#endif
         }
 
         public virtual Response GetDocumentation()
