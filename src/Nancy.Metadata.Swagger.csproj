@@ -6,19 +6,19 @@
     <Authors>Jaxel Rojas;Anton Kudryavtsev</Authors>
     <Title>Nancy.Metadata.Swagger.Core</Title>
     <Product>Nancy.Metadata.Swagger.Core</Product>
-    <Description>This is a port of the Nancy.Metadata.Swagger that works for Nancy on all versions</Description>
+    <Description>This is a port of the Nancy.Metadata.Swagger that works for newer Nancy versions</Description>
     <PackageTags>nancyfx;swagger</PackageTags>
     <RepositoryUrl>https://github.com/Jaxelr/Nancy.Metadata.Swagger.Core</RepositoryUrl>
     <PackageProjectUrl>https://github.com/Jaxelr/Nancy.Metadata.Swagger.Core</PackageProjectUrl>
     <PackageIcon>icon.png</PackageIcon>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Copyright>Copyright 2020</Copyright>
-    <PackageReleaseNotes>Upgrade to libraries dependencies</PackageReleaseNotes>
+    <PackageReleaseNotes>Expanded library to target to nancy 1.x for .Net Framework</PackageReleaseNotes>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <RootNamespace>Nancy.Metadata.Swagger</RootNamespace>
     <AssemblyName>Nancy.Metadata.Swagger</AssemblyName>
-    <Version>0.3.4</Version>
+    <Version>0.4.0</Version>
   </PropertyGroup>
   <ItemGroup>
     <None Include="..\icon.png" Pack="true" PackagePath="" />
