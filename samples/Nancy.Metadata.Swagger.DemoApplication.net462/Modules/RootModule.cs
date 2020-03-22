@@ -11,11 +11,11 @@ namespace Nancy.Metadata.Swagger.DemoApplication.Modules
     {
         public RootModule() : base("/api")
         {
-            Get["/hello"] = r => HelloWorld();
-            Get["/hello/{name}"] = r => Hello(r.name);
-            Post["/hello"] = r => HelloPost();
-            Post["hello/model"] = r => HelloModel();
-            Post["/hello/nestedmodel"] = r => HelloNestedModel();
+            Get["SimpleRequest", "/hello"] = _ => HelloWorld();
+            Get["SimpleRequestWithParameter", "/hello/{name}"] = r => Hello(r.name);
+            Post["SimplePostRequest", "/hello"] = _ => HelloPost();
+            Post["PostRequestWithModel", "hello/model"] = _ => HelloModel();
+            Post["PostRequestWithNestedModel", "/hello/nestedmodel"] = _ => HelloNestedModel();
         }
 
         private Response HelloNestedModel()
