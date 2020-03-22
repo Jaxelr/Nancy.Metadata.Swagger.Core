@@ -10,6 +10,6 @@
     <PackageReference Include="Microsoft.AspnetCore.Owin" Version="3.1.2" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\src\Nancy.Metadata.Swagger.csproj" />
+    <ProjectReference Include="..\..\src\Nancy.Metadata.Swagger.csproj" />
   </ItemGroup>
 </Project>
