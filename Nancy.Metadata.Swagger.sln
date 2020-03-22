@@ -21,11 +21,18 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{164996DB-961C-4E15-8B53-87DB746932CC}"
 	ProjectSection(SolutionItems) = preProject
 		.github\CONTRIBUTING.md = .github\CONTRIBUTING.md
-		.github\ISSUE_TEMPLATE.md = .github\ISSUE_TEMPLATE.md
 		.github\PULL_REQUEST_TEMPLATE.md = .github\PULL_REQUEST_TEMPLATE.md
+		.github\stale.yml = .github\stale.yml
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nancy.Metadata.Swagger.DemoApplication.net462", "samples\Nancy.Metadata.Swagger.DemoApplication.net462\Nancy.Metadata.Swagger.DemoApplication.net462.csproj", "{9B3CABB5-4AD2-4AA0-8B41-E293CCD9563E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ISSUE_TEMPLATE", "ISSUE_TEMPLATE", "{4ABDAFCA-65B2-47B5-BB88-68026F2BC0C4}"
+	ProjectSection(SolutionItems) = preProject
+		.github\ISSUE_TEMPLATE\Bug_report.md = .github\ISSUE_TEMPLATE\Bug_report.md
+		.github\ISSUE_TEMPLATE\Feature_request.md = .github\ISSUE_TEMPLATE\Feature_request.md
+		.github\ISSUE_TEMPLATE\Support.md = .github\ISSUE_TEMPLATE\Support.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,6 +60,7 @@ Global
 		{2F0A9588-2611-421B-AECE-9C1EE0CC4885} = {A3214450-31E6-4381-BFD2-23812714F576}
 		{164996DB-961C-4E15-8B53-87DB746932CC} = {F9E7BCCF-1895-4234-AE87-9F4F2DE7EC83}
 		{9B3CABB5-4AD2-4AA0-8B41-E293CCD9563E} = {A3214450-31E6-4381-BFD2-23812714F576}
+		{4ABDAFCA-65B2-47B5-BB88-68026F2BC0C4} = {164996DB-961C-4E15-8B53-87DB746932CC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7CE3FFCB-AF8C-4D71-A7BA-B423860DB1F8}
