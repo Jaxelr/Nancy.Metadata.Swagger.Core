@@ -38,8 +38,14 @@
     <PackageReference Include="Nancy" Version="2.0.0" />
     <PackageReference Include="Nancy.Metadata.Modules" Version="2.0.0" />
   </ItemGroup>
+
   <ItemGroup Condition="'$(TargetFramework)' != 'netstandard2.0' ">
-    <PackageReference Include="Nancy" Version="1.4.5" />
-    <PackageReference Include="Nancy.Metadata.Modules" Version="1.4.1" />
+    <PackageReference Include="Nancy" Version="1.4.5">
+      <NoWarn>NU1605</NoWarn>
+    </PackageReference>
+
+    <PackageReference Include="Nancy.Metadata.Modules" Version="1.4.1">
+      <NoWarn>NU1605</NoWarn>
+    </PackageReference>
   </ItemGroup>
 </Project>
