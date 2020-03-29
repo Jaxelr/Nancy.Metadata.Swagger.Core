@@ -25,7 +25,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{1649
 		.github\stale.yml = .github\stale.yml
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nancy.Metadata.Swagger.DemoApplication.net462", "samples\Nancy.Metadata.Swagger.DemoApplication.net462\Nancy.Metadata.Swagger.DemoApplication.net462.csproj", "{9B3CABB5-4AD2-4AA0-8B41-E293CCD9563E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nancy.Metadata.Swagger.DemoApplication.net46", "samples\Nancy.Metadata.Swagger.DemoApplication.net462\Nancy.Metadata.Swagger.DemoApplication.net46.csproj", "{9B3CABB5-4AD2-4AA0-8B41-E293CCD9563E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ISSUE_TEMPLATE", "ISSUE_TEMPLATE", "{4ABDAFCA-65B2-47B5-BB88-68026F2BC0C4}"
 	ProjectSection(SolutionItems) = preProject
