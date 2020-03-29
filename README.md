@@ -18,6 +18,10 @@ Install Nancy.Metadata.Swagger.Core via nuget packages:
 
     PM> Install-Package Nancy.Metadata.Swagger.Core
 
+You will also need the `Nancy.Metadata.Modules` package from nuget:
+
+	PM> Install-Package Nancy.Metadata.Modules
+
 Once this is done, locate your module implementations and generate a MetadataModule with the descriptions.
 
 This is a sample implementation of a Nancy Module:
