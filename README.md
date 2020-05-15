@@ -4,6 +4,8 @@
 
 This is a port of the existing [Nancy.Metadata.Swagger repository](https://github.com/HackandCraft/Nancy.Metadata.Swagger) but updated to target the latest version of NancyFx and also targeting NetStandard 2.0. Most of the modifications have been minor tweaks and havent really affected the surface of the API in order to maintain backwards compatibility when targeting Nancy 1.+ and 2.+.
 
+__Note:__ Since Nancyfx is no longer being maintained i will be deprioritizing this library, please check [here for details](https://github.com/NancyFx/Nancy/issues/3010)
+
 ## Introduction
 
 Nancy.Metadata.Swagger is a library that makes it easier to create API documentation for [swagger 2.0](http://swagger.io/) with Nancy metadata modules. This targets exclusively the 2.0 Swagger specification. For an updated version that targets OpenApi 3.0.0, check the following [library](https://github.com/Jaxelr/Nancy.Metadata.OpenApi).
